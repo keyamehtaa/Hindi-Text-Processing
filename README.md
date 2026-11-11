@@ -21,12 +21,12 @@ This project uses pretrained models. No models were trained or fine-tuned from s
 | Sentence embeddings | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |
 | Hindi-to-English translation | `facebook/nllb-200-distilled-600M` |
 
-The models are downloaded from their respective Hugging Face repositories when required.
+The pretrained models are downloaded from Hugging Face when required. No custom model weights are included because no model was trained.
 
 ## Methodology
 
-- The original Hindi text files are extracted and processed independently.
-- Punctuation is restored using a pretrained punctuation restoration model.
+- Original Hindi text files are extracted and processed independently.
+- Punctuation is restored using a pretrained model.
 - Text is divided into sentence-level segments while preserving NULL markers.
 - Multilingual sentence embeddings are generated to calculate semantic similarity.
 - Similar sentences are grouped into candidate groups, with a maximum group size of five.
@@ -37,27 +37,24 @@ The models are downloaded from their respective Hugging Face repositories when r
 
 ## Repository Contents
 
-- `Hindi_Text_Processing_Final.ipynb` – Complete implementation.
-- `Hindi_Text_Processing_Outputs.zip` – Processed results and output files.
-- `outputs/` – Individual output files (if included).
-- `requirements.txt` – Python dependencies.
+- `Hindi_text_processing_NLP_task (1).ipynb` – Complete implementation.
+- `Hindi_Text_Processing_Outputs (1).zip` – Processed results and output files.
+- `candidate_groups.csv` – Semantic candidate groups.
+- `final_bilingual_groups.csv` – Hindi and English grouped results.
+- `sentence_translations.csv` – Sentence-level translations.
 
 ## Model Weights
 
-No custom model weights were trained in this project. Pretrained models are downloaded from Hugging Face during execution.
-
-## Output Files
-
-The project generates punctuated text files, segmented sentence data, sentence embeddings, candidate groups, English translations, bilingual groups, and segmentation review results.
-
-## Links
-
-- **GitHub Repository:** [Add repository link]
-- **Google Drive Outputs:** [Add publicly accessible Drive link, if used]
+No custom models were trained or fine-tuned in this project. Therefore, there are no custom model weights to upload. The pretrained models are downloaded from Hugging Face during execution.
 
 ## Execution
 
 The notebook is designed to run in Google Colab using a CPU environment. Upload the original dataset ZIP when prompted and execute the notebook cells in order.
+
+## Links
+
+- **GitHub Repository:** https://github.com/keyamehtaa/Hindi-Text-Processing
+- **Google Drive Model Weights:** Not applicable; no custom models were trained.
 
 ## Limitations
 
